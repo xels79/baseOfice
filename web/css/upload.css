@@ -1,0 +1,183 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29.09.2016, 16:56:27
+    Author     : Александр
+*/
+.uploader {
+  border: 2px dotted #A5A5C7;
+  width: 100%;
+  /*        height: 234px;*/
+  height: 247px;
+  color: #92AAB0;
+  text-align: center;
+  vertical-align: middle;
+  padding: 30px 0px;
+  margin-bottom: 10px;
+  font-size: 200%;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.uploader div .or {
+  font-size: 50%;
+  font-weight: bold;
+  color: #C0C0C0;
+  padding: 10px;
+}
+.uploader div.browser label {
+  background-color: #5a7bc2;
+  padding: 5px 15px;
+  color: white;
+  padding: 6px 0px;
+  font-size: 40%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 300px;
+  margin: 20px auto 0px auto;
+  box-shadow: 2px 2px 2px #888888;
+}
+.uploader div.browser span {
+  cursor: pointer;
+}
+.uploader div.browser input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: solid transparent;
+  border-width: 0 0 100px 200px;
+  opacity: .0;
+  filter: alpha(opacity=0);
+  -o-transform: translate(250px, -50px) scale(1);
+  -moz-transform: translate(-300px, 0) scale(4);
+  direction: ltr;
+  cursor: pointer;
+}
+.uploader div.browser label:hover {
+  background-color: #427fed;
+}
+.debug {
+  max-height: 150px;
+}
+.debug .panel-heading {
+  padding: 2px 15px;
+}
+.debug .panel-title {
+  font-size: 10px;
+  font-weight: bold;
+}
+.debug > div > div > .list-group {
+  font-size: 10px;
+  max-height: 80px;
+  overflow-y: scroll;
+}
+.debug > div > div > .list-group > .list-group-item {
+  padding: 2px 10px!important;
+  height: 18px;
+  overflow: hidden;
+}
+.loading {
+  max-height: 130px;
+  margin-bottom: 10px;
+}
+.panel-files {
+  font-size: 10px;
+  height: 90px;
+  overflow-y: scroll;
+}
+.file-loaded-detail .panel-body > ul > li > div {
+  max-width: 110px!important;
+}
+@media (max-width: 1190px) {
+  .file-loaded-detail .panel-body > ul > li > div {
+    max-width: 500px!important;
+  }
+}
+@media (max-width: 505px) {
+  .file-loaded-detail .panel-body > ul > li > div {
+    max-width: 320px!important;
+  }
+}
+@media (max-width: 425px) {
+  .file-loaded-detail .panel-body > ul > li > div {
+    max-width: 250px!important;
+  }
+}
+@media (max-width: 350px) {
+  .file-loaded-detail .panel-body > ul > li > div {
+    max-width: 230px!important;
+  }
+}
+.file-loaded {
+  height: 418px;
+  max-height: 420px;
+}
+.file-loaded > .panel-heading > span {
+  color: #C0C0C0;
+}
+.file-loaded .panel-body > ul > li {
+  height: 24px;
+  padding: 2px 15px;
+}
+.file-loaded .panel-body > ul > li > a {
+  line-height: 1;
+  font-size: 12px;
+}
+.file-loaded .panel-body > ul > li > div {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 450px;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1190px) {
+  .file-loaded .panel-body > ul > li > div {
+    max-width: 365px;
+  }
+}
+.file-loaded .panel-body > ul > li:hover {
+  background-color: #d5d5d5;
+}
+.file-loaded .panel-body > ul > ul {
+  margin: 10px;
+}
+.file-loaded .panel-body > ul > ul > li > a,
+.file-loaded .panel-body > ul > ul > li > span {
+  height: 24px;
+  padding: 2px 12px;
+  font-size: 12px;
+}
+.file-loaded .panel-body .list-group-item-heading:hover {
+  background-color: #fff;
+}
+.mProgress {
+  background-color: #d9d9d9;
+  border-style: outset;
+  border-width: 2px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mProgress .mProgress-bar {
+  background: url(/base/pic/backg.gif) repeat-y;
+  border-radius: 5px;
+}
+.mProgress .mProgress-bar > span {
+  padding: 2px 5px;
+}
+.file-id {
+  display: none;
+}
+/*# sourceMappingURL=upload.css.map */
