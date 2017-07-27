@@ -1,0 +1,56 @@
+<?php
+namespace app\rbac;
+ 
+use Yii;
+use yii\rbac\Rule;
+ 
+class UserGroupRule extends Rule
+{
+    public $name = 'userGroup';
+     
+    public function execute($user, $item, $params)
+    {
+        
+       /* function showRes($end=true){
+ 
+        echo 'user: ';print_r($user);echo '<br>';
+        echo 'item: ';print_r($item);echo '<br>';
+        echo 'params: ';print_r($params);echo '<br>';
+             $role = \Yii::$app->user->identity->role;
+       
+        echo 'role: ';print_r($role);echo '<br>';
+        Yii::$app->end();
+      //  }   */
+
+         //showRes();
+                
+       
+        $role = \Yii::$app->user->identity->role;
+        if (!\Yii::$app->user->isGuest) {
+            $role = \Yii::$app->user->identity->role;
+            if ($item->name === 'admin') {
+               // echo 'admin';Yii::$app->end();
+                return $role == 'admin';
+            } elseif ($item->name === 'user') {
+              //  echo 'user';Yii::$app->end();
+                return $role == 'admin' || $role == 'user'|| $role == 'moder';
+            } elseif ($item->name === 'moder') {
+               // echo 'moder';Yii::$app->end();
+                return $role == 'admin' || $role == 'moder';
+            }
+            elseif ($item->name === 'guest') {
+               // echo 'moder';Yii::$app->end();
+                return $role == 'guest' || $role == 'moder' || $role == 'admin' || $role == 'user';
+            }
+            return false;
+        }else{
+           //print_r('item name='.$item->name."(guest)");Yii::$app->end();
+           //return true;
+           $test='guest';
+           if(!strcasecmp($item->name,$test))//навергое false???
+              return true;
+           else
+              return false;
+        }
+    }
+}
